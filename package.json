@@ -1,0 +1,25 @@
+{
+  "name": "io.pinf.service.mandrill",
+  "version": "0.1.0",
+  "dependencies": {
+    "deepmerge": "^0.2.10",
+    "mandrill-api": "^1.0.45",
+    "q": "^1.4.1"
+  },
+  "config": {
+    "org.pinf.genesis.lib/0": {
+      "api": {
+        "provides": {
+          "send": "./api/send.js"
+        },
+        "consumes": {
+          "config": "org.pinf.genesis.lib/0/config",
+          "ASSERT": "assert",
+          "DEEPMERGE": "deepmerge",
+          "Q": "q",
+          "MANDRILL": "mandrill-api/mandrill"
+        }
+      }
+    }
+  }
+}
